@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     wget \
     curl \
+    libcurl4-openssl-dev \
     pkg-config \
     libnuma-dev \
     && rm -rf /var/lib/apt/lists/*
