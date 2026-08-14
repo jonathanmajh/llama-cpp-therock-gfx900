@@ -1,13 +1,15 @@
 # Use a ROCm SDK image as the base
 FROM rocm/dev-ubuntu-22.04:5.3
 
-# Install build dependencies
+# Install build dependencies, including hipblas and rocblas
 RUN apt-get update && apt-get install -y \
     cmake \
     git \
     build-essential \
     pkg-config \
     libstdc++-12-dev \
+    hipblas \
+    rocblas \
     && rm -rf /var/lib/apt/lists/*
 
 # Set the ROCm target architecture for MI25
