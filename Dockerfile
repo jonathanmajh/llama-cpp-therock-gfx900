@@ -65,6 +65,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install required runtime dependencies for the HIP environment
 RUN apt-get update && apt-get install -y \
+    ca-certificates \
     libnuma1 \
     libgomp1 \
     && rm -rf /var/lib/apt/lists/*
